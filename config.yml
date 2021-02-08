@@ -1,0 +1,16 @@
+title: hello worlf
+description: programming
+template:
+  repo: hello-worlf-template
+  name: hello-worlf
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
